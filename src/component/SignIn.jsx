@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './SignIn.css';
+import { Navigate } from 'react-router-dom';
 
 class SignIn extends Component {
     constructor() {
@@ -32,7 +33,8 @@ class SignIn extends Component {
         const { email, password, isAuthenticated } = this.state;
 
         if (isAuthenticated) {
-            return <div className="sign-in-success">Welcome to Tapioca Cafe.</div>;
+            return <div className="sign-in-success"><Navigate to="/home" />
+            </div>;
         }
 
         return (
